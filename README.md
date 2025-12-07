@@ -9,13 +9,13 @@ This repository contains a complete data pipeline that:
 - **Transforms** raw JSON data into structured, clean datasets
 - **Loads** processed data into a PostgreSQL database for analysis
 
-The dataset covers residential properties (apartments, flats, and houses) across 12 major Indian metropolitan cities.
+The dataset covers residential properties (apartments, flats, and houses) across 11 major Indian metropolitan cities.
 
 ## 🏙️ Cities Covered
 
 - **NCR Region**: Ghaziabad, New Delhi, Faridabad, Gurugram, Noida
 - **West India**: Ahmedabad, Mumbai, Pune
-- **South India**: Bangalore, Chennai, Hyderabad
+- **South India**: Bangalore, Hyderabad
 - **East India**: Kolkata
 
 ## ✨ Features
@@ -152,7 +152,7 @@ affordable_2bhk = pd.read_sql_query(query, engine)
 
 ```python
 # Get average price per city
-cities = ['Bangalore', 'Mumbai', 'Delhi', 'Pune']
+cities = ['Bangalore', 'Mumbai', 'New Delhi', 'Pune']
 for city in cities:
     df = pd.read_sql_table(city, engine)
     print(f"{city} - Average Price: ₹{df['price'].mean():,.2f}")
